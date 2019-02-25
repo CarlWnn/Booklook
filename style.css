@@ -5,3 +5,7 @@
   .show {
     display: block;
   } */
+
+  #loader{
+    display: none; 
+  }
