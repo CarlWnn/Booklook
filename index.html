@@ -4,10 +4,6 @@
     <link rel="stylesheet" type="text/css" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
     <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/parsleyjs/dist/parsley.js"></script>
-    <script src="script.js"> </script>
-    <meta charset="UTF-8"> 
     <title>Document</title>
 </head>
 
@@ -20,44 +16,40 @@
       <h1> BookLook <i class="far fa-eye"></i></h1>
     </div>
 
-    <div id="loader">
-         <img src="ring-loader.gif" alt="loader" >
-    </div>
-
     <div class="books-list">
-        
+            <div id="loader">
+                    <img src="ring-loader.gif" alt="loader" >
+            </div>
     </div> 
     
     <form data-parsley-validate>
 
         <h3> Search by title</h3>
-        <div class="form-group">
-         <input class="form-control" id="input-title" type="text" placeholder="title" 	> 
-        </div>
+            <div class="form-group">
+            <input class="form-control" id="input-title" type="text" placeholder="title" 	> 
+            </div>
         <button type="button" class="searchbytitle btn btn-primary">Search</button>
         <!-- <input type="button" value="search" class="search btn btn-primary">  -->
 
-    </form>
-
-    <form data-parsley-validate>
-            <h3> Search by author</h3>
+        <h3> Search by author</h3>
             <div class="form-group">
              <input class="form-control" id="input-author" type="text" placeholder="author" > 
             </div>
-            <button type="button" class="searchbyauthor btn btn-primary">Search</button>
+        <button type="button" class="searchbyauthor btn btn-primary">Search</button>
     
-    </form>
 
-    <form data-parsley-validate>
-            <h3> Search by ISBN number </h3>
+        <h3> Search by ISBN number </h3>
             <div class="form-group">
              <input class="form-control" id="input-isbn" type="text" placeholder="ISBN number" 
               data-parsley-type="digits" >
             </div>
-            <button type="button" class="searchbyisbn btn btn-primary">Search</button>
+        <button type="button" class="searchbyisbn btn btn-primary">Search</button>
+        
     </form>
   
-    <!-- <div class="container">
+    <!-- Parsley simple example for testing 
+
+        <div class="container">
             <form  data-parsley-validate>
                 <div> 
                    <input type="text" data-parsley-required="true"> 
@@ -83,7 +75,3 @@
     
 </body>
 </html>
-
-<!-- /data-parsley-focus="last" -->
-<!-- data-parsley-trigger="focusin focusout"  -->
-<!-- 	 data-parsley-focus="first" -->
