@@ -45,12 +45,12 @@ $('.searchbyauthor').on('click', function(){
 
 $('.searchbyisbn').on('click', function(){
     var input= $('#input-isbn').val();
-    if(isNaN(input)) {
-      alert( "invalid ISBN number !") 
-    } else{
+    // if(isNaN(input)) {
+    //   alert( "invalid ISBN number !") 
+    // } else{
     var url = 'https://www.googleapis.com/books/v1/volumes?q=isbn:'+ input;
     fetch(url);
-    }
+    //}
 });
 
 // when clicking on a book, render only that book info
@@ -68,3 +68,9 @@ $('.books-list').on('click', '.book-info', function(){
 $(document).ajaxComplete(function() {
     $('#loader').hide();
 });
+
+
+// window.Parsley.on('field:error', function() {
+//     // This global callback will be called for any field that fails validation.
+//     console.log('Validation failed for: ', this.$element);
+//   });
